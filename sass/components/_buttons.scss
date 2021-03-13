@@ -1,0 +1,46 @@
+.button {
+    @include btn;
+     p {
+    margin-left: 2rem;
+    }
+}
+.number {
+    background: $colour-primary;
+    text-align: center;
+    padding-top:5px;
+height: 2em;
+width: 2em;
+    position: absolute;
+    left: -0.9em;
+    border-radius: 50%;
+    margin: 0px!important;
+    color: $colour-white;
+}
+.main {
+    display: flex;
+    flex-wrap: nowrap;
+    width: 400px;
+    height: 100px;
+    &:hover > .test3 {
+        animation-name: checkdiv;
+        animation-duration: 500ms;
+        animation-fill-mode: forwards;
+    }
+    &:hover > .test2 {
+        animation-name: contentdiv;
+        animation-duration: 500ms;
+        animation-fill-mode: forwards;
+    }
+}
+.test2 {
+    width: 100%;
+    height: 100%;
+    background-color: blueviolet;
+    overflow: hidden;
+}
+.test3 {
+    height: 100%;
+    width: 0%;
+    background-color: blue;
+  overflow: hidden;
+}

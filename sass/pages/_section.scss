@@ -1,0 +1,153 @@
+.mapsearch { //première section de acceuil
+    @include flex-center;
+    flex-direction: column;
+   background: #F6F6F6 ;
+    p {
+        text-align: center
+    }
+    aside   {
+        @include flex-center;
+        width: 100%;
+        height: 50px;
+        background-color: $color-background;
+
+     
+    }
+    &--article {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        height: 200px;
+        width: 100%;
+    }
+    
+}
+#mapmarker{
+    margin-right: 1.2em;
+} 
+
+.filtres{
+    width: 100%;
+    @include flex-center;
+    flex-direction: column;
+    i{
+        color: #7e7e7e;
+    }
+}
+//les restaurants
+#restaurants  {
+    width: 100%;
+    background: $color-background;
+     @include flex-center;
+     flex-direction: column;
+    &--title{
+        font-weight: bold;
+        font-size: 1.2rem;
+    }
+    &--container {
+        @include flex-center;
+        flex-direction: column;
+    }
+}
+.content {
+    margin-top: 1.5em;
+    background-color: $colour-white;
+    border-radius: 1em 1em;
+    &--bg1{
+        background: url('/maquettesomf/images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg') ;
+    @include card-bg;
+    }
+    &--new {
+        position: absolute;
+        top: 15px;
+        right: 15px;
+        background-color: $colour-tertiary;
+        color: #008766;
+        font-size: 1.3em;
+        font-weight: bold;
+        padding: 10px 15px;
+        border-radius: 10px;
+    }
+    &--text {
+        display: flex;
+        justify-content: space-between;
+        padding: 15px 15px;
+    }
+    &--bg2
+    {
+background: url('/maquettesomf/images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg');
+@include card-bg;
+    }
+    &--bg3 {
+        background: url('/maquettesomf/images/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg');
+        @include card-bg;
+        
+    }
+    &--bg4 {
+        background: url('/maquettesomf/images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg');
+        @include card-bg;
+    }
+}
+.like {
+    // position: relative;
+    align-self: center;
+    height: 16px;
+    
+    .fas {
+        // position: absolute;
+        color: blueviolet;
+        display: none;
+    }
+    .far {
+        // position: absolute;
+    }
+    &:hover {
+        .fas {
+            display: block;
+        }
+        .far {
+            // position: absolute;
+            display: none;
+        }
+    }
+}
+.container{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+.load {
+    width: 50vw;
+    max-width: 300px;
+    height: 5em;
+    display: flex;
+    justify-content: space-evenly;
+    &__bar {
+        border-radius: 50%;
+        height: 2em;
+        width: 2em;
+        animation: loader $anim-dur backwards 3 linear;
+        @for $i from 1 through 6 {
+            &--#{$i} {
+                animation-delay: $anim-delay * $i;
+            }
+    }
+
+}
+@include desktop {
+    width: 15vw;
+}
+}
+.bar--purple{
+            background-color: #9356DC;
+        }
+.bar--pink{
+            background-color: #FF79DA;
+        }
+
+.bar--green{
+            background-color: #99E2D0;
+        }
+    
+    

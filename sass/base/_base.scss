@@ -1,0 +1,19 @@
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html {
+   font-size: 16px;
+}
+
+body {
+    box-sizing: border-box;
+    background: $colour-white;
+}
+a {
+    text-decoration: none!important;
+    color: black; // a voir si vaut mieu pas mettre color directement sur les éléments dans boutons par exemple: notamment icone et le texte
+}

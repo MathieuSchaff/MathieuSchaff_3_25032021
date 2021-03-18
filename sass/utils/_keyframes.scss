@@ -2,9 +2,7 @@
 0% {
 width: 0%;
 }
-25%{
-    height: 100%;
-}
+
 100% {
    
 width: 4rem;
@@ -58,4 +56,12 @@ transform: translate(0, 10px);
            
             transform: translate(0, 0);
          }
+}
+@keyframes checkrotate{
+from{
+   transform: rotate(90deg)
+}
+to{
+   transform: rotate(360deg);
+}
 }

@@ -1,6 +1,6 @@
 .main--menu{
     background-color: $color-background;
-    border-radius: .75rem .75rem 0 0;
+    border-radius: 3rem 3rem 0 0;
     width: 100%;
     &--header {
         width: 90%;
@@ -11,11 +11,11 @@
         font-size: 1.7rem;
         font-weight: 900;
         padding: 20px 10px;
+        margin-top: -3.5rem;
         margin-left: 5%;
         margin-right: 5%;
         @include desktop{
-        //    margin: 0;
-        //     width: %;
+        margin-top: -3rem;
         }
     }
 }
@@ -73,17 +73,30 @@ bottom: 0;
        margin-right: 15px;
     }
     &__check{
-        height: 70%;
+        @include flex-center;
+        height: 100%;
        width: 0%;
        background: $colour-tertiary;
+       border-radius: 0 0.75rem 0.75rem 0;
+       color: white;
+       overflow: hidden;
+       i{
+           background-color: $colour-tertiary;
+           opacity: 0;
+        //   
+       }
     }
     &:hover {
         .menu-item__content{
-            animation: contentdiv 1.5s cubic-bezier(0,1,0,1) forwards;
+            animation: contentdiv 1.5s ease-in-out forwards;
         }
         .menu-item__check{
-            animation: checkdiv 1.5s cubic-bezier(0,1,0,1) forwards;
-
+            animation: checkdiv 1.5s ease-in-out forwards;
+          
+        }
+        i{
+            opacity: 1;
+            animation: checkrotate 1.5s ease-out;
         }
     }
 }
@@ -95,11 +108,14 @@ bottom: 0;
 }
 .bgmenu--menu3 {
     width: 100%;
- padding-top: 40%;
+ padding-top: 50%;
  background: url('/maquettesomf/images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg') ;
  background-size: cover;
  background-position: center;
  background-repeat: no-repeat;
+ @media screen and (min-width: 1000px){
+     padding-top: 30%;
+ }
 }
 
 .delay {

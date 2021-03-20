@@ -16,6 +16,32 @@ width: 4rem;
         width: 75%
     }
 }
+@keyframes checkdivend{
+   0% {
+      width: 4rem;
+   }
+   
+   100% {
+   width: 0%;
+   }
+   }
+
+@keyframes contentdivend {
+       from{
+         width: 75%
+       }
+       to {
+         width: 100%;
+       }
+   }
+@keyframes checkrotate{
+      from{
+         transform: rotate(90deg)
+      }
+      to{
+         transform: rotate(360deg);
+      }
+      }
 @keyframes card-delay{
  0%{
 opacity: 0;
@@ -57,11 +83,12 @@ transform: translate(0, 10px);
             transform: translate(0, 0);
          }
 }
-@keyframes checkrotate{
-from{
-   transform: rotate(90deg)
-}
-to{
-   transform: rotate(360deg);
-}
-}
+@keyframes containerloader {
+         0% {
+            transform: scale(1, 1)
+         }
+         100% {
+             
+            transform: scale(0, 0)
+         }
+     }

@@ -2,8 +2,11 @@
     background-color: $color-background;
     border-radius: 3rem 3rem 0 0;
     width: 100%;
+    margin-top: -3.5rem;
+    display: flex;
+    justify-content: center;
     &--header {
-        width: 90%;
+        width: 100%;
         display: flex;
         justify-content: space-between;
         align-items: center;
@@ -11,9 +14,7 @@
         font-size: 1.7rem;
         font-weight: 900;
         padding: 20px 10px;
-        margin-top: -3.5rem;
-        margin-left: 5%;
-        margin-right: 5%;
+
         @include desktop{
         margin-top: -3rem;
         }
@@ -57,7 +58,7 @@ bottom: 0;
     background-color: $colour-white;
     margin: 10px 0px;
     border-radius: 15px;
-    // padding: 15px 0px 15px 15px;
+    overflow: hidden;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -68,6 +69,7 @@ bottom: 0;
        align-items: center;
        width: 100%;
        height: 100%;
+       animation: contentdivend .2s ease-in-out forwards;
    }
     &__price {
        margin-right: 15px;
@@ -80,23 +82,24 @@ bottom: 0;
        border-radius: 0 0.75rem 0.75rem 0;
        color: white;
        overflow: hidden;
+       animation: checkdivend .2s ease-in-out forwards;
        i{
            background-color: $colour-tertiary;
-           opacity: 0;
+           opacity: 1;
         //   
        }
     }
     &:hover {
         .menu-item__content{
-            animation: contentdiv 1.5s ease-in-out forwards;
+            animation: contentdiv .5s ease-in-out forwards;
         }
         .menu-item__check{
-            animation: checkdiv 1.5s ease-in-out forwards;
+            animation: checkdiv .5s ease-in-out forwards;
           
         }
         i{
             opacity: 1;
-            animation: checkrotate 1.5s ease-out;
+            animation: checkrotate .5s ease-out;
         }
     }
 }
@@ -120,24 +123,28 @@ bottom: 0;
 
 .delay {
     &--1{ 
-        animation-delay: 0.1s;
-    }
-    &--2 {
         animation-delay: 0.2s;
     }
-    &--3 {
+    &--2 {
         animation-delay: 0.3s;
     }
-    &--4{
+    &--3 {
         animation-delay: 0.4s;
     }
-    &--5{
+    &--4{
         animation-delay: 0.5s;
     }
-    &--6{
+    &--5{
         animation-delay: 0.6s;
     }
-    &--7{
+    &--6{
         animation-delay: 0.7s;
     }
+    &--7{
+        animation-delay: 0.8s;
+    }
+}
+.main--container{
+    margin-top: 3.5rem;
+ width: 90%;
 }

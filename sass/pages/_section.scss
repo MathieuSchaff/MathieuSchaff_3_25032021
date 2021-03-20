@@ -6,6 +6,7 @@
         text-align: center;
         font-size: 1.2rem;
         font-weight: 300;
+        margin-top: 25px
     }
     aside   {
         @include flex-center;
@@ -19,8 +20,8 @@
         flex-direction: column;
         justify-content: space-around;
         align-items: center;
-        height: 250px;
         width: 100%;
+        padding: 2rem;
     }
     &--title {
         font-size: 1.5rem;
@@ -32,6 +33,7 @@
 .aside-title{
     font-weight: 500!important;
     color: rgba(#292828, 0.7);
+    margin: 0!important;
 }
 #mapmarker{
     margin-right: 1.2em;
@@ -78,7 +80,7 @@
     &--container {
         width: 100%;
         display: flex;
-        justify-content: space-between;
+        justify-content: space-around;
        flex-wrap: wrap;
             
         a{
@@ -152,7 +154,12 @@
 .container{
     display: flex;
     justify-content: center;
-    width: 100%;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+    background: linear-gradient(176deg, rgba(67,43,187,0.14889705882352944) 0%, rgba(238,119,227,0.8799894957983193) 100%);
+    animation: containerloader 0.2s ease-in-out  forwards;
+    animation-delay: 3s;
 }
 .load {
     width: 50vw;
@@ -160,6 +167,8 @@
     height: 5em;
     display: flex;
     justify-content: space-evenly;
+    align-items: center;
+    
     &__bar {
         border-radius: 50%;
         height: 2em;

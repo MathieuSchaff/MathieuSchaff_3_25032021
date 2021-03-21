@@ -2,8 +2,8 @@
 
 header {
     @include flex-center;
-    margin-top: 1em;
-    margin-bottom: 1em;
+    margin-top: .5em;
+    margin-bottom: .5em;
     height: 50px;
 
 }
@@ -16,4 +16,8 @@ header {
        left: 2rem;
        font-size: 1.5rem;
    }
+}
+.header--logo{
+    font-family: 'Shrikhand', cursive;
+    font-size: 3rem;
 }

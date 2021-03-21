@@ -158,8 +158,10 @@
     width: 100vw;
     height: 100vh;
     background: linear-gradient(176deg, rgba(67,43,187,0.14889705882352944) 0%, rgba(238,119,227,0.8799894957983193) 100%);
-    animation: containerloader 0.2s ease-in-out  forwards;
+    animation: loader-opacity 0.2s forwards;
     animation-delay: 3s;
+    position: fixed;
+z-index: 10;
 }
 .load {
     width: 50vw;
@@ -168,16 +170,17 @@
     display: flex;
     justify-content: space-evenly;
     align-items: center;
-    
+
     &__bar {
         border-radius: 50%;
         height: 2em;
         width: 2em;
-        animation: loader $anim-dur backwards 3 linear;
+        animation: loader $anim-dur forwards 3 linear;
         @for $i from 1 through 6 {
             &--#{$i} {
                 animation-delay: $anim-delay * $i;
             }
+        
     }
 
 }

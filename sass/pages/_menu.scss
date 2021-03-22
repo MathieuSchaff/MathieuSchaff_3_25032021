@@ -15,7 +15,7 @@
         font-size: 1.7rem;
         font-weight: 900;
         padding: 20px 10px;
-
+        // en desktop la div main menu remonte de -3.5rem donc pour équilibrer, je remonte aussi la div header
         @include desktop{
         margin-top: -3rem;
         }
@@ -27,7 +27,6 @@
     flex-direction: column;
     @include desktop {
         flex-direction: row;
-        // margin: 0px 20px ;
     }
 }
 .menu-section{
@@ -37,6 +36,7 @@
   h1{
       display: inline-block;
       position: relative;
+    //   je rajoute un after pour souligner la moitié de l'élément
       &::after{
 content: '';
 height: 3px;
@@ -63,6 +63,7 @@ bottom: 0;
     display: flex;
     align-items: center;
     justify-content: space-between;
+    // l'animation d'apparition met 1 seconde à sefaire
     animation: card-delay 1s both cubic-bezier(.62,.75,.61,.79);
    &__content {
        display: flex;
@@ -70,8 +71,10 @@ bottom: 0;
        align-items: center;
        width: 100%;
        height: 100%;
+    //    j'applique la keyframe contentdivend qui met .2s à se faire car c'est le délai à laquelle la première carte commence à apparaitre
        animation: contentdivend .2s ease-in-out forwards;
        h2 {
+        // les mots reste sur une seule ligne et sont hidden. Les mots hidden apparaisse en "..."
         white-space: nowrap;
         text-overflow: ellipsis;
         overflow: hidden;
@@ -98,10 +101,10 @@ bottom: 0;
        i{
            background-color: $colour-tertiary;
            opacity: 1;
-        //   
        }
     }
     &:hover {
+        // au hover de menu-item les deux éléments contenus à l'intérieur prennent une place différente
         .menu-item__content{
             animation: contentdiv .5s ease-in-out forwards;
         }
@@ -126,11 +129,11 @@ bottom: 0;
  background-size: cover;
  background-position: center;
  background-repeat: no-repeat;
- @media screen and (min-width: 1000px){
+ @include responsive-min(1000px){
      padding-top: 30%;
  }
 }
-
+// délai d'appration des cartes dans le menu
 .delay {
     &--1{ 
         animation-delay: 0.2s;

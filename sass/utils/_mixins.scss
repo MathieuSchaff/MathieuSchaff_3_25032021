@@ -38,6 +38,8 @@
     justify-content: center;
     align-items: center;
 }
+
+
 @mixin card-bg {
     width: 100%;
     // max-width: 400px;
@@ -51,3 +53,8 @@
     position: relative;
     border-radius: 1em 1em 0 0;
 }
+@mixin responsive-min($responsivemin){
+        @media screen and (min-width: $responsivemin){
+            @content;
+        }
+    }

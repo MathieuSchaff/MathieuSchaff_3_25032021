@@ -96,7 +96,7 @@
     border-radius: 1em 1em;
     width: 100%;
     &--bg1{
-        background: url('master/maquettesomf/images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg') ;
+        background: url('/maquettesomf/images/restaurants/jay.jpg') ;
     @include card-bg;
     }
     &--new {
@@ -115,16 +115,16 @@
     }
     &--bg2
     {
-    background: url('/maquettesomf/images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg');
+    background: url('/maquettesomf/images/restaurants/louis.jpg');
     @include card-bg;
     }
     &--bg3 {
-        background: url('/maquettesomf/images/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg');
+        background: url('/maquettesomf/images/restaurants/stil.jpg');
         @include card-bg;
         
     }
     &--bg4 {
-        background: url('/maquettesomf/images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg');
+        background: url(/maquettesomf/images/restaurants/toa.jpg);
         @include card-bg;
     }
 }

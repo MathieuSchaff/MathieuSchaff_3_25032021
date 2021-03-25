@@ -122,10 +122,10 @@ bottom: 0;
     overflow: hidden;
     padding-left: 10px;
 }
-.bgmenu--menu3 {
+.bgmenu--menu1 {
     width: 100%;
  padding-top: 50%;
- background: url('/maquettesomf/images/restaurants/jay.jpg') ;
+ background: url('/images/toa.jpg') ;
  background-size: cover;
  background-position: center;
  background-repeat: no-repeat;
@@ -133,10 +133,39 @@ bottom: 0;
      padding-top: 30%;
  }
 }
-// maquettesomf\images\restaurants\toa-heftiba-DQKerTsQwi0-unsplash.jpg
-// master/maquettesomf/images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg
-// C:\Users\mathi\Documents\VS\ohmyfood\maquettesomf\images\restaurants\jay-wennington-N_Y88TWmGwA-unsplash.jpg
-// délai d'appration des cartes dans le menu
+.bgmenu--menu2 {
+    width: 100%;
+ padding-top: 50%;
+ background: url('/images/stil.jpg') ;
+ background-size: cover;
+ background-position: center;
+ background-repeat: no-repeat;
+ @include responsive-min(1000px){
+     padding-top: 30%;
+ }
+}
+.bgmenu--menu3 {
+    width: 100%;
+ padding-top: 50%;
+ background: url('/images/jay.jpg') ;
+ background-size: cover;
+ background-position: center;
+ background-repeat: no-repeat;
+ @include responsive-min(1000px){
+     padding-top: 30%;
+ }
+}
+.bgmenu--menu4 {
+    width: 100%;
+ padding-top: 50%;
+ background: url('/images/louis.jpg') ;
+ background-size: cover;
+ background-position: center;
+ background-repeat: no-repeat;
+ @include responsive-min(1000px){
+     padding-top: 30%;
+ }
+}
 .delay {
     &--1{ 
         animation-delay: 0.2s;

@@ -96,7 +96,7 @@
     border-radius: 1em 1em;
     width: 100%;
     &--bg1{
-        background: url('/maquettesomf/images/restaurants/jay.jpg') ;
+        background: url('/images/jay.jpg') ;
     @include card-bg;
     }
     &--new {
@@ -115,16 +115,17 @@
     }
     &--bg2
     {
-    background: url('/maquettesomf/images/restaurants/louis.jpg');
+        background: url('/images/stil.jpg');
+    
     @include card-bg;
     }
     &--bg3 {
-        background: url('/maquettesomf/images/restaurants/stil.jpg');
-        @include card-bg;
+        background: url("/images/toa.jpg");
         
+        @include card-bg;
     }
     &--bg4 {
-        background: url(/maquettesomf/images/restaurants/toa.jpg);
+        background: url('/images/louis.jpg');
         @include card-bg;
     }
 }

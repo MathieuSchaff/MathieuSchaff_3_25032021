@@ -27,12 +27,16 @@
     flex-direction: column;
     @include desktop {
         flex-direction: row;
+        align-items: flex-start;
     }
 }
 .menu-section{
   width: 90%;
   padding: 15px;
   max-width: 450px;
+  @include desktop {
+      width: 33%;
+  }
   h1{
       display: inline-block;
       position: relative;

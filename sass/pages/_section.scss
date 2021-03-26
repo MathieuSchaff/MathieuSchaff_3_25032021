@@ -1,7 +1,7 @@
 .mapsearch { //première section de acceuil
     @include flex-center;
     flex-direction: column;
-   background: #F6F6F6 ;
+    background: #F6F6F6 ;
     p {
         text-align: center;
         font-size: 1.2rem;
@@ -13,7 +13,7 @@
         width: 100%;
         height: 50px;
         background-color: $color-background;
-     
+        
     }
     &--article {
         display: flex;
@@ -69,9 +69,9 @@
 .restaurants  {
     width: 100%;
     background: $color-background;
-     @include flex-center;
-     flex-direction: column;
-     padding: 25px 25px;
+    @include flex-center;
+    flex-direction: column;
+    padding: 25px 25px;
     &--title{
         font-size: 1.5rem;
         font-weight: 700;
@@ -81,12 +81,12 @@
         width: 100%;
         display: flex;
         justify-content: space-around;
-       flex-wrap: wrap;
-            
+        flex-wrap: wrap;
+        
         a{
             width: 80%;
             max-width: 400px;
-           
+            
         }
     }
 }
@@ -97,7 +97,7 @@
     width: 100%;
     &--bg1{
         background: url('../images/jay.jpg') ;
-    @include card-bg;
+        @include card-bg;
     }
     &--new {
         background-color: $colour-tertiary;
@@ -115,17 +115,17 @@
     }
     &--bg2
     {
-        background: url('/images/stil.jpg');
-    
-    @include card-bg;
+        background: url('../images/stil.jpg');
+        
+        @include card-bg;
     }
     &--bg3 {
-        background: url("/images/toa.jpg");
+        background: url("../images/toa.jpg");
         
         @include card-bg;
     }
     &--bg4 {
-        background: url('/images/louis.jpg');
+        background: url('../images/louis.jpg');
         @include card-bg;
     }
 }
@@ -148,9 +148,9 @@
             font-weight: 900;
             background-clip: text;
             -webkit-background-clip: text;
-            animation: backgroundimage 1s ease-in-out 0s 1  forwards;
-        // background-image:  linear-gradient(90deg, rgba(187,43,175,1) 0%, rgba(238,119,206,1) 100%);
-           
+            animation: backgroundimage 0.2s ease-in-out 0s 1  forwards;
+            
+            
         }
     }
 }
@@ -164,7 +164,7 @@
     animation: loader-opacity 0.2s forwards;
     animation-delay: 3s;
     position: fixed;
-z-index: 10;
+    z-index: 10;
 }
 .load {
     width: 50vw;
@@ -173,7 +173,7 @@ z-index: 10;
     display: flex;
     justify-content: space-evenly;
     align-items: center;
-
+    
     &__bar {
         border-radius: 50%;
         height: 2em;
@@ -183,23 +183,22 @@ z-index: 10;
             &--#{$i} {
                 animation-delay: $anim-delay * $i;
             }
+            
+        }
         
     }
-
-}
-@include desktop {
-    width: 15vw;
-}
+    @include desktop {
+        width: 15vw;
+    }
 }
 .bar--purple{
-            background-color: #9356DC;
-        }
+    background-color: #9356DC;
+}
 .bar--pink{
-            background-color: #FF79DA;
-        }
+    background-color: #FF79DA;
+}
 
 .bar--green{
-            background-color: #99E2D0;
-        }
-    
-    
+    background-color: #99E2D0;
+}
+

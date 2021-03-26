@@ -17,7 +17,7 @@
         padding: 20px 10px;
         // en desktop la div main menu remonte de -3.5rem donc pour équilibrer, je remonte aussi la div header
         @include desktop{
-        margin-top: -3rem;
+            margin-top: -3rem;
         }
     }
 }
@@ -31,34 +31,34 @@
     }
 }
 .menu-section{
-  width: 90%;
-  padding: 15px;
-  max-width: 450px;
-  @include desktop {
-      width: 33%;
-  }
-  h1{
-      display: inline-block;
-      position: relative;
-    //   je rajoute un after pour souligner la moitié de l'élément
-      &::after{
-content: '';
-height: 3px;
-width: 50%;
-background: $colour-tertiary;
-position:absolute;
-left: 0;
-bottom: 0;
-      }
-  }
+    width: 90%;
+    padding: 15px;
+    max-width: 450px;
+    @include desktop {
+        width: 33%;
+    }
+    h1{
+        display: inline-block;
+        position: relative;
+        //   je rajoute un after pour souligner la moitié de l'élément
+        &::after{
+            content: '';
+            height: 3px;
+            width: 50%;
+            background: $colour-tertiary;
+            position:absolute;
+            left: 0;
+            bottom: 0;
+        }
+    }
 }
 .menu-items{
     display: flex;
     flex-direction: column;
 }
 .menu-item {
-   width: 100%;
-   height: 70px;
+    width: 100%;
+    height: 70px;
     min-width: 250px;
     background-color: $colour-white;
     margin: 10px 0px;
@@ -69,44 +69,44 @@ bottom: 0;
     justify-content: space-between;
     // l'animation d'apparition met 1 seconde à sefaire
     animation: card-delay 1s both cubic-bezier(.62,.75,.61,.79);
-   &__content {
-       display: flex;
-       justify-content: space-between;
-       align-items: center;
-       width: 100%;
-       height: 100%;
-    //    j'applique la keyframe contentdivend qui met .2s à se faire car c'est le délai à laquelle la première carte commence à apparaitre
-       animation: contentdivend .2s ease-in-out forwards;
-       h2 {
-        // les mots reste sur une seule ligne et sont hidden. Les mots hidden apparaisse en "..."
-        white-space: nowrap;
-        text-overflow: ellipsis;
-        overflow: hidden;
-       }
-      p {
-        white-space: nowrap;
-        text-overflow: ellipsis;
-        overflow: hidden;
-       }
-   }
+    &__content {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        height: 100%;
+        //    j'applique la keyframe contentdivend qui met .2s à se faire car c'est le délai à laquelle la première carte commence à apparaitre
+        animation: contentdivend .2s ease-in-out forwards;
+        h2 {
+            // les mots reste sur une seule ligne et sont hidden. Les mots hidden apparaisse en "..."
+            white-space: nowrap;
+            text-overflow: ellipsis;
+            overflow: hidden;
+        }
+        p {
+            white-space: nowrap;
+            text-overflow: ellipsis;
+            overflow: hidden;
+        }
+    }
     &__price {
-       margin-right: 15px;
-       white-space: nowrap;
-       text-overflow: none;
+        margin-right: 15px;
+        white-space: nowrap;
+        text-overflow: none;
     }
     &__check{
         @include flex-center;
         height: 100%;
-       width: 0%;
-       background: $colour-tertiary;
-       border-radius: 0 0.75rem 0.75rem 0;
-       color: white;
-       overflow: hidden;
-       animation: checkdivend .2s ease-in-out forwards;
-       i{
-           background-color: $colour-tertiary;
-           opacity: 1;
-       }
+        width: 0%;
+        background: $colour-tertiary;
+        border-radius: 0 0.75rem 0.75rem 0;
+        color: white;
+        overflow: hidden;
+        animation: checkdivend .2s ease-in-out forwards;
+        i{
+            background-color: $colour-tertiary;
+            opacity: 1;
+        }
     }
     &:hover {
         // au hover de menu-item les deux éléments contenus à l'intérieur prennent une place différente
@@ -115,7 +115,7 @@ bottom: 0;
         }
         .menu-item__check{
             animation: checkdiv .5s ease-in-out forwards;
-          
+            
         }
         i{
             opacity: 1;
@@ -129,47 +129,47 @@ bottom: 0;
 }
 .bgmenu--menu1 {
     width: 100%;
- padding-top: 50%;
- background: url('../images/toa.jpg') ;
- background-size: cover;
- background-position: center;
- background-repeat: no-repeat;
- @include responsive-min(1000px){
-     padding-top: 30%;
- }
+    padding-top: 50%;
+    background: url('../images/toa.jpg') ;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    @include responsive-min(1000px){
+        padding-top: 30%;
+    }
 }
 .bgmenu--menu2 {
     width: 100%;
- padding-top: 50%;
- background: url('../images/stil.jpg') ;
- background-size: cover;
- background-position: center;
- background-repeat: no-repeat;
- @include responsive-min(1000px){
-     padding-top: 30%;
- }
+    padding-top: 50%;
+    background: url('../images/stil.jpg') ;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    @include responsive-min(1000px){
+        padding-top: 30%;
+    }
 }
 .bgmenu--menu3 {
     width: 100%;
- padding-top: 50%;
- background: url('../images/jay.jpg') ;
- background-size: cover;
- background-position: center;
- background-repeat: no-repeat;
- @include responsive-min(1000px){
-     padding-top: 30%;
- }
+    padding-top: 50%;
+    background: url('../images/jay.jpg') ;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    @include responsive-min(1000px){
+        padding-top: 30%;
+    }
 }
 .bgmenu--menu4 {
     width: 100%;
- padding-top: 50%;
- background: url('../images/louis.jpg') ;
- background-size: cover;
- background-position: center;
- background-repeat: no-repeat;
- @include responsive-min(1000px){
-     padding-top: 30%;
- }
+    padding-top: 50%;
+    background: url('../images/louis.jpg') ;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    @include responsive-min(1000px){
+        padding-top: 30%;
+    }
 }
 .delay {
     &--1{ 
@@ -196,5 +196,5 @@ bottom: 0;
 }
 .main--container{
     margin-top: 3.5rem;
- width: 90%;
+    width: 90%;
 }

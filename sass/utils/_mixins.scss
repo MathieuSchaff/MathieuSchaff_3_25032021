@@ -1,59 +1,59 @@
 // @mixin heading-shadow($colour:lightness-shift($colour-primary), $offset: $heading-shadow-size){
-//     text-shadow: $offset $offset $colour;
-// }
-
-
-@mixin btn {
-    display: flex;
-    align-items: center;
-    background: $color-background; //changer en rgba et changer opacity avec mixins et fonctions
-    cursor: pointer;
-    width: 85vw;
-    max-width: 320px;
-    height: 80px;
-    margin: $button-margin;
-    border-radius: $border-radius-button;
-    box-shadow: 10px 5px 5px rgba(65, 63, 63, 0.2);
-
-    &:hover{
-        background:  rgb(147, 86, 220, 0.1);
-        i{
-            color: $colour-primary;
+    //     text-shadow: $offset $offset $colour;
+    // }
+    
+    
+    @mixin btn {
+        display: flex;
+        align-items: center;
+        background: $color-background; //changer en rgba et changer opacity avec mixins et fonctions
+        cursor: pointer;
+        width: 85vw;
+        max-width: 320px;
+        height: 80px;
+        margin: $button-margin;
+        border-radius: $border-radius-button;
+        box-shadow: 10px 5px 5px rgba(65, 63, 63, 0.2);
+        
+        &:hover{
+            background:  rgb(147, 86, 220, 0.1);
+            i{
+                color: $colour-primary;
+            }
+        }
+        
+    }
+    @mixin mobile-only {
+        @media screen and (max-width: map-get($breakpoints, mobile)){
+            @content;
         }
     }
-
-}
-@mixin mobile-only {
-    @media screen and (max-width: map-get($breakpoints, mobile)){
-        @content;
+    @mixin desktop{
+        @media screen and (min-width: map-get($breakpoints, desktop)){
+            @content;
+        }
     }
-}
-@mixin desktop{
-    @media screen and (min-width: map-get($breakpoints, desktop)){
-        @content;
+    @mixin flex-center {
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
-}
-@mixin flex-center {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-
-@mixin card-bg {
-    width: 100%;
-    // max-width: 400px;
-    padding-bottom: 50%;
-    display: flex;
-    align-items: flex-start;
-    justify-content: flex-end;
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-    position: relative;
-    border-radius: 1em 1em 0 0;
-}
-@mixin responsive-min($responsivemin){
+    
+    
+    @mixin card-bg {
+        width: 100%;
+        // max-width: 400px;
+        padding-bottom: 50%;
+        display: flex;
+        align-items: flex-start;
+        justify-content: flex-end;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        position: relative;
+        border-radius: 1em 1em 0 0;
+    }
+    @mixin responsive-min($responsivemin){
         @media screen and (min-width: $responsivemin){
             @content;
         }

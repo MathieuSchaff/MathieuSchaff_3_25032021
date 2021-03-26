@@ -1,21 +1,21 @@
 // animations pour les plats du menu --> apparition d'une div check verte au hover
 @keyframes checkdiv{
-0% {
-width: 0%;
-}
-
-100% {
+   0% {
+      width: 0%;
+   }
    
-width: 4rem;
-}
+   100% {
+      
+      width: 4rem;
+   }
 }
 @keyframes contentdiv {
-    from{
-        width: 100%;
-    }
-    to {
-        width: 75%
-    }
+   from{
+      width: 100%;
+   }
+   to {
+      width: 75%
+   }
 }
 @keyframes checkdivend{
    0% {
@@ -23,89 +23,89 @@ width: 4rem;
    }
    
    100% {
-   width: 0%;
+      width: 0%;
    }
-   }
+}
 
 @keyframes contentdivend {
-       from{
-         width: 75%
-       }
-       to {
-         width: 100%;
-       }
+   from{
+      width: 75%
    }
-   // rotation de l'icone check dans les plats du menu
+   to {
+      width: 100%;
+   }
+}
+// rotation de l'icone check dans les plats du menu
 @keyframes checkrotate{
-      from{
-         transform: rotate(90deg)
-      }
-      to{
-         transform: rotate(360deg);
-      }
-      }
-      // apparition des cartes du menu quand on clique sur un restaurants
+   from{
+      transform: rotate(90deg)
+   }
+   to{
+      transform: rotate(360deg);
+   }
+}
+// apparition des cartes du menu quand on clique sur un restaurants
 @keyframes card-delay{
- 0%{
-opacity: 0;
-transform: translate(0, 10px);
- }
- 25%{
-    opacity: 0.2;
-    transform: translate(0, 8px);
- }
- 50%{
-    opacity: 0.5;
-    transform: translate(0, 5px);
- }
- 75%{
-    opacity: 1;
-    transform: translate(0, 2px);
- }
- 100%{
-   
-    transform: translate(0, 0);
- }
+   0%{
+      opacity: 0;
+      transform: translate(0, 10px);
+   }
+   25%{
+      opacity: 0.2;
+      transform: translate(0, 8px);
+   }
+   50%{
+      opacity: 0.5;
+      transform: translate(0, 5px);
+   }
+   75%{
+      opacity: 1;
+      transform: translate(0, 2px);
+   }
+   100%{
+      
+      transform: translate(0, 0);
+   }
 }
 // apparition d'un loader lors de l'arrivée de l'utilisateur sur la page principale
 @keyframes loader{
-    0%{
-        
-        transform: translate(0, 0x);
-         }
-         25%{
-           
-            transform: translate(0, 15px);
-         }
-         
-         75%{
-          
-            transform: translate(0, -15px);
-         }
-         100%{
-           
-            transform: translate(0, 0);
-           
-         }
+   0%{
+      
+      transform: translate(0, 0x);
+   }
+   25%{
+      
+      transform: translate(0, 15px);
+   }
+   
+   75%{
+      
+      transform: translate(0, -15px);
+   }
+   100%{
+      
+      transform: translate(0, 0);
+      
+   }
 }
 @keyframes loadend{
-0%{
-   display: block;
-}
-100%{
-   display: none;
-}
+   0%{
+      display: block;
+   }
+   100%{
+      display: none;
+   }
 }
 @keyframes loader-opacity {
-         0%{
-            opacity: 1;
-         }
-
-         100% {
-            opacity: 0;
-            z-index: -100;
-         }
-     }
+   0%{
+      opacity: 1;
+   }
+   
+   100% {
+      opacity: 0;
+      z-index: -100;
+   }
+}
 @keyframes backgroundimage {
    0%{
       background-image: none;

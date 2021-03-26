@@ -92,6 +92,7 @@ bottom: 0;
     &__price {
        margin-right: 15px;
        white-space: nowrap;
+       text-overflow: none;
     }
     &__check{
         @include flex-center;

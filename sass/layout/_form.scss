@@ -15,4 +15,8 @@
             font-size: 1.2rem;
             font-weight: 400;
     }
+    &:hover > button{
+        cursor: pointer;
+        background: linear-gradient(hsla(317, 100%, 80%, 1), hsla(267, 66%, 65%, 1));
+    }
 }

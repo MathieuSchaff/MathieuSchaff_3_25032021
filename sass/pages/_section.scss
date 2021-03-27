@@ -140,7 +140,7 @@
     .far {
         font-size: 1.5rem;
         transition: background-image 2s ease-in-out;
-        background-image: none;
+        
     }
     &:hover {
         .far {
@@ -148,8 +148,8 @@
             font-weight: 900;
             background-clip: text;
             -webkit-background-clip: text;
-            animation: backgroundimage 0.2s ease-in-out 0s 1  forwards;
-            
+            animation: backgroundimage 1s ease-in-out 0s 1  forwards;
+            transform-origin:bottom;
             
         }
     }

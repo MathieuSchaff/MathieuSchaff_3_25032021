@@ -84,15 +84,13 @@
             overflow: hidden;
         }
         p {
-            white-space: nowrap;
-            text-overflow: ellipsis;
-            overflow: hidden;
+            
         }
     }
     &__price {
         margin-right: 15px;
         white-space: nowrap;
-        text-overflow: none;
+      
     }
     &__check{
         @include flex-center;
@@ -122,6 +120,11 @@
             animation: checkrotate .5s ease-out;
         }
     }
+}
+.text_p{
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
 }
 .menu-item__text{
     overflow: hidden;

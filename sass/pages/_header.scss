@@ -12,12 +12,18 @@ header {
     position: relative;
     &--arrow{
         position: absolute;
-        top: 30%;
+        top: 45%;
         left: 2rem;
         font-size: 1.5rem;
+        @include responsive-max(500px){
+            left: 1rem;
+        }
     }
 }
 .header-logo{
     font-family: 'Shrikhand', cursive;
     font-size: 3rem;
+    @include responsive-max(500px){
+        font-size: 2rem;
+    }
 }

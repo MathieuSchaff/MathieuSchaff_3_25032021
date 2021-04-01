@@ -63,3 +63,8 @@
             @content;
         }
     }
+    @mixin responsive-max($responsivemin){
+        @media screen and (max-width: $responsivemin){
+            @content;
+        }
+    }

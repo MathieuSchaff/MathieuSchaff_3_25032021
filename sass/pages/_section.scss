@@ -84,7 +84,7 @@
         flex-wrap: wrap;
         
         a{
-            width: 80%;
+            width: 100%;
             max-width: 400px;
             
         }
@@ -95,6 +95,7 @@
     background-color: $colour-white;
     border-radius: 1em 1em;
     width: 100%;
+    box-shadow: 5px 5px 5px rgb(0, 0, 0, 0.5);
     &--bg1{
         background: url('../images/jay.jpg') ;
         @include card-bg;

@@ -1,5 +1,5 @@
 # MathieuSchaff_3_25032021
-Projet 3 de la formation Openclassrooms "Développeur Front end"
+Projet 3 
 
 Adresse du repo: 
 https://github.com/MathieuSchaff/MathieuSchaff_3_25032021

@@ -1,0 +1,205 @@
+.mapsearch { //première section de acceuil
+    @include flex-center;
+    flex-direction: column;
+    background: #F6F6F6 ;
+    p {
+        text-align: center;
+        font-size: 1.2rem;
+        font-weight: 300;
+        margin-top: 25px
+    }
+    aside   {
+        @include flex-center;
+        width: 100%;
+        height: 50px;
+        background-color: $color-background;
+        
+    }
+    &--article {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        width: 100%;
+        padding: 2rem;
+    }
+    &--title {
+        font-size: 1.5rem;
+        text-align: center;
+        font-weight: 700;
+    }
+    
+}
+.aside-title{
+    font-weight: 500!important;
+    color: rgba(#292828, 0.7);
+    margin: 0!important;
+}
+#mapmarker{
+    margin-right: 1.2em;
+} 
+
+.filtres{
+    width: 100%;
+    @include flex-center;
+    flex-direction: column;
+    margin-top: 15px;
+    &--text{
+        font-size: 1.5rem;
+        font-weight: 700;
+        justify-self: flex-start;
+    }
+    i{
+        color: #7e7e7e;
+    }
+}
+.main--filtres{
+    &--button{
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 25px;
+        @media screen and (min-width: 1100px) {
+            width: 100%;
+            flex-direction: row;
+            justify-content: space-around;
+        }
+    }
+}
+//les restaurants
+.restaurants  {
+    width: 100%;
+    background: $color-background;
+    @include flex-center;
+    flex-direction: column;
+    padding: 25px 25px;
+    &--title{
+        font-size: 1.5rem;
+        font-weight: 700;
+        align-self: flex-start;
+    }
+    &--container {
+        width: 100%;
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap;
+        
+        a{
+            width: 100%;
+            max-width: 400px;
+            
+        }
+    }
+}
+.content {
+    margin-top: 1.5em;
+    background-color: $colour-white;
+    border-radius: 1em 1em;
+    width: 100%;
+    box-shadow: 5px 5px 5px rgb(0, 0, 0, 0.5);
+    &--bg1{
+        background: url('../images/jay.jpg') ;
+        @include card-bg;
+    }
+    &--new {
+        background-color: $colour-tertiary;
+        color: #008766;
+        font-size: 1.1em;
+        font-weight: bold;
+        padding: 10px 15px;
+        border-radius: 5px;
+        margin: 10px 10px 0 0;
+    }
+    &--text {
+        display: flex;
+        justify-content: space-between;
+        padding: 15px 15px;
+    }
+    &--bg2
+    {
+        background: url('../images/stil.jpg');
+        
+        @include card-bg;
+    }
+    &--bg3 {
+        background: url("../images/toa.jpg");
+        
+        @include card-bg;
+    }
+    &--bg4 {
+        background: url('../images/louis.jpg');
+        @include card-bg;
+    }
+}
+.whatrestaurant1{
+    p{
+        font-weight: 300;
+    }
+}
+.like {
+    align-self: center;
+    
+    .far {
+        font-size: 1.5rem;
+       
+        
+    }
+    &:hover {
+        .far {
+            color: transparent;
+            font-weight: 900;
+            background-clip: text;
+            -webkit-background-clip: text;
+            animation: backgroundimage 1s ease-in-out 0s 1  forwards;
+            transform-origin:bottom;
+            
+        }
+    }
+}
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+    background: linear-gradient(176deg, rgba(67,43,187,0.14889705882352944) 0%, rgba(238,119,227,0.8799894957983193) 100%);
+    animation: loader-opacity 0.2s forwards;
+    animation-delay: 3s;
+    position: fixed;
+    z-index: 10;
+}
+.load {
+    width: 50vw;
+    max-width: 300px;
+    height: 5em;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    
+    &__bar {
+        border-radius: 50%;
+        height: 2em;
+        width: 2em;
+        animation: loader $anim-dur forwards 3 linear;
+        @for $i from 1 through 6 {
+            &--#{$i} {
+                animation-delay: $anim-delay * $i;
+            }
+            
+        }
+        
+    }
+    @include desktop {
+        width: 15vw;
+    }
+}
+.bar--purple{
+    background-color: #9356DC;
+}
+.bar--pink{
+    background-color: #FF79DA;
+}
+
+.bar--green{
+    background-color: #99E2D0;
+}
+

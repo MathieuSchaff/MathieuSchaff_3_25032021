@@ -1,0 +1,36 @@
+// les éléments du footer sont toujours centrés au milieu et la liste est en colonne
+footer{
+    display: flex;
+    justify-content: center;
+    background-color: #353535;
+}
+.footer{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    padding: 15px;
+    &--ul{
+        list-style-type: none;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+    }
+    &--li{
+        margin-top: 20px;
+        font-size: 1em;
+    }
+    &--link{
+        color: whitesmoke;
+        
+    }
+}
+.footer i{
+    margin-right: 1rem;
+}
+.footer--title{
+    font-size: 1.5rem;
+    color: whitesmoke;
+    font-family: 'Shrikhand', cursive;
+}

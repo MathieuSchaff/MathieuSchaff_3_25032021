@@ -1,0 +1,18 @@
+.button {
+    @include btn;
+    font-weight: bold;
+    i {
+        margin: 0 1em 0 1em;
+    }
+}
+.number {
+    background: $colour-primary;
+    text-align: center;
+    padding-top:5px;
+    height: 2em;
+    width: 2em;
+    margin-left: -1em;
+    border-radius: 50%;
+    
+    color: $colour-white;
+}

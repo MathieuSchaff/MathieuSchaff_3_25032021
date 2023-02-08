@@ -1,0 +1,21 @@
+$colour-primary: rgb(147, 86, 220);
+$colour-secondary: #FF79DA;
+$colour-tertiary: #99E2D0;
+$colour-white: #fff;
+$color-background: #EAEAEA;
+$heading-shadow-size: .55rem;
+$button-margin: 1rem 0rem 1rem 0rem;
+$border-radius-button: 1.5rem 1.5rem 1.5rem 1.5rem;
+
+$breakpoints: (
+    mobile: 599px,
+    laptop: 1000px,
+    desktop: 1200px
+);
+$font-size: (
+    bigsize:2rem,
+    smallsize:1.5rem,
+ 
+);
+$anim-dur: .8s;
+$anim-delay: $anim-dur /6;

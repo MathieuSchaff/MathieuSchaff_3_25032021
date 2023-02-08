@@ -1,0 +1,224 @@
+.main--menu{
+    background-color: $color-background;
+    border-radius: 3rem 3rem 0 0;
+    width: 100%;
+    margin-top: -3rem;
+    display: flex;
+    justify-content: center;
+    padding-bottom: 1.5rem;
+    &--header {
+        width: 100%;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        height: 100px;
+        font-size: 1.7rem;
+        font-weight: 900;
+        padding: 20px 10px;
+        // en desktop la div main menu remonte de -3.5rem donc pour équilibrer, je remonte aussi la div header
+        @include desktop{
+            margin-top: -3rem;
+        }
+        @include desktop{
+            justify-content: space-between;
+        }
+    }
+}
+.menu-wrapper{
+    width: 100%;
+    @include flex-center;
+    flex-direction: column;
+    @include desktop {
+        flex-direction: row;
+        align-items: flex-start;
+    }
+}
+.menu-section{
+    width: 90%;
+    padding: 15px;
+    max-width: 450px;
+    @include desktop {
+        width: 33%;
+    }
+    @include responsive-max(500px){
+        width: 100%;
+        padding: 15px 5px;
+    }
+    h1{
+        display: inline-block;
+        position: relative;
+        //   je rajoute un after pour souligner la moitié de l'élément
+        &::after{
+            content: '';
+            height: 3px;
+            width: 50%;
+            background: $colour-tertiary;
+            position:absolute;
+            left: 0;
+            bottom: 0;
+        }
+    }
+}
+.menu-items{
+    display: flex;
+    flex-direction: column;
+}
+.menu-item {
+    width: 100%;
+    height: 70px;
+    min-width: 355px;
+    background-color: $colour-white;
+    margin: 10px 0px;
+    border-radius: 15px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    // l'animation d'apparition met 1 seconde à sefaire
+    animation: card-delay 1s both cubic-bezier(.62,.75,.61,.79);
+    @include responsive-max(500px){
+        min-width: auto;
+    }
+    &__content {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        height: 100%;
+        //    j'applique la keyframe contentdivend qui met .2s à se faire car c'est le délai à laquelle la première carte commence à apparaitre
+        animation: contentdivend .2s ease-in-out forwards;
+        h2 {
+            // les mots reste sur une seule ligne et sont hidden. Les mots hidden apparaisse en "..."
+            white-space: nowrap;
+            text-overflow: ellipsis;
+            overflow: hidden;
+        }
+      
+    }
+    &__price {
+        margin-right: 15px;
+        white-space: nowrap;
+        font-weight: bold;
+        @include responsive-max(500px){
+            margin-right: 5px;
+        }
+    }
+    &__check{
+        @include flex-center;
+        height: 100%;
+        width: 0%;
+        background: $colour-tertiary;
+        border-radius: 0 0.75rem 0.75rem 0;
+        color: white;
+        overflow: hidden;
+        animation: checkdivend .2s ease-in-out forwards;
+        i{
+            background-color: $colour-tertiary;
+            opacity: 1;
+        }
+    }
+    &:hover {
+        // au hover de menu-item les deux éléments contenus à l'intérieur prennent une place différente
+        .menu-item__content{
+            animation: contentdiv .5s ease-in-out forwards;
+        }
+        .menu-item__check{
+            animation: checkdiv .5s ease-in-out forwards;
+            
+        }
+        i{
+            opacity: 1;
+            animation: checkrotate .5s ease-out;
+        }
+    }
+}
+.text_p{
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    font-size: 0.8rem;
+    @include desktop{
+        font-size: 1rem;
+    }
+}
+.menu-item__text{
+    overflow: hidden;
+    padding-left: 10px;
+}
+.bgmenu--menu1 {
+    width: 100%;
+    padding-top: 50%;
+    background: url('../images/toa.jpg') ;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    @include responsive-min(1000px){
+        padding-top: 30%;
+    }
+}
+.bgmenu--menu2 {
+    width: 100%;
+    padding-top: 50%;
+    background: url('../images/stil.jpg') ;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    @include responsive-min(1000px){
+        padding-top: 30%;
+    }
+}
+.bgmenu--menu3 {
+    width: 100%;
+    padding-top: 50%;
+    background: url('../images/jay.jpg') ;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    @include responsive-min(1000px){
+        padding-top: 30%;
+    }
+}
+.bgmenu--menu4 {
+    width: 100%;
+    padding-top: 50%;
+    background: url('../images/louis.jpg') ;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    @include responsive-min(1000px){
+        padding-top: 30%;
+    }
+}
+.delay {
+    &--1{ 
+        animation-delay: 0.2s;
+    }
+    &--2 {
+        animation-delay: 0.3s;
+    }
+    &--3 {
+        animation-delay: 0.4s;
+    }
+    &--4{
+        animation-delay: 0.5s;
+    }
+    &--5{
+        animation-delay: 0.6s;
+    }
+    &--6{
+        animation-delay: 0.7s;
+    }
+    &--7{
+        animation-delay: 0.8s;
+    }
+}
+.main--container{
+    margin-top: 1rem;
+    width: 90%;
+    @include responsive-max(500px){
+        width: 100%;
+    }
+    @include desktop{
+        margin-top: 2rem;
+    }
+}

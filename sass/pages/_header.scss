@@ -1,0 +1,29 @@
+//header principal
+
+header {
+    @include flex-center;
+    padding-top: .5em;
+    margin-bottom: .5em;
+    height: 50px;
+    
+}
+// la flèche qui ramène à la page d'acceuil est en position absolute
+.header-menu{
+    position: relative;
+    &--arrow{
+        position: absolute;
+        top: 45%;
+        left: 2rem;
+        font-size: 1.5rem;
+        @include responsive-max(500px){
+            left: 1rem;
+        }
+    }
+}
+.header-logo{
+    font-family: 'Shrikhand', cursive;
+    font-size: 3rem;
+    @include responsive-max(500px){
+        font-size: 2rem;
+    }
+}

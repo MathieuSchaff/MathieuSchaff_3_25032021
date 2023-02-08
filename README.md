@@ -1,13 +1,14 @@
-# MathieuSchaff_3_25032021
-Projet 3 
+# Intégration d'une maquette en HTML et SASS
 
-Adresse du repo: 
+## Objectif
+
+    Maitriser SASS.
+    Maitriser le responsive design.
+    Comprendre et utiliser les animations CSS.
+
+Adresse du repo:
 https://github.com/MathieuSchaff/MathieuSchaff_3_25032021
 
-Adresse de la page hébergé : 
+Adresse de la page hébergé :
 
 https://mathieuschaff.github.io/MathieuSchaff_3_25032021/
-
-Dépendances : Aucune 
-
-Dépendances dev : "1.32.8 compiled with dart2js 2.10.5"  
